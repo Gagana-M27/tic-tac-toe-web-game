@@ -1,0 +1,161 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080817">
+  <title>Tic Tac Toe | Neon Arena</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Welcome Screen -->
+  <section class="welcome-screen" id="welcome-screen">
+    <div class="welcome-content">
+      <div class="welcome-icon">✦</div>
+      <p class="welcome-tag">THE ULTIMATE CLASSIC</p>
+      <h1>TIC <span>TAC</span> TOE</h1>
+      <p class="welcome-description">
+        Think smart. Make your move. Claim the victory.
+      </p>
+
+      <div class="welcome-symbols">
+        <span class="symbol-x">X</span>
+        <span class="symbol-o">O</span>
+        <span class="symbol-x">X</span>
+      </div>
+
+      <button id="play-now-btn" class="play-now-btn">
+        PLAY NOW <span>➜</span>
+      </button>
+
+      <p class="welcome-footer">ONE BOARD. TWO RIVALS. ONE WINNER.</p>
+    </div>
+  </section>
+
+  <!-- Main Game -->
+  <main class="game-container">
+
+    <header class="game-header">
+      <p class="welcome-tag">NEON ARENA</p>
+      <h1>TIC <span>TAC</span> TOE</h1>
+      <p>Challenge your mind. Rule the board.</p>
+    </header>
+
+    <!-- Game Mode -->
+    <section class="mode-section">
+      <h2>Choose Game Mode</h2>
+
+      <div class="mode-buttons">
+        <button id="pvp-btn" class="mode-btn active" type="button">
+          👥 Two Players
+        </button>
+
+        <button id="ai-btn" class="mode-btn" type="button">
+          🤖 Vs Computer
+        </button>
+      </div>
+    </section>
+
+    <!-- AI Difficulty -->
+    <section id="difficulty-section" class="difficulty-section" hidden>
+      <label for="difficulty">AI Difficulty</label>
+      <select id="difficulty">
+        <option value="easy">Easy</option>
+        <option value="medium" selected>Medium</option>
+        <option value="hard">Hard</option>
+      </select>
+    </section>
+
+    <!-- Scoreboard -->
+    <section class="scoreboard">
+      <div class="score-card">
+        <span id="player-x-name">Player X</span>
+        <strong id="score-x">0</strong>
+      </div>
+
+      <div class="score-card">
+        <span>Draws</span>
+        <strong id="score-draw">0</strong>
+      </div>
+
+      <div class="score-card">
+        <span id="player-o-name">Player O</span>
+        <strong id="score-o">0</strong>
+      </div>
+    </section>
+
+    <!-- Turn Indicator -->
+    <div id="turn-indicator" aria-live="polite">
+      Player X's turn
+    </div>
+
+    <!-- Move Countdown Timer -->
+    <div class="move-timer" id="move-timer" role="timer"
+         aria-live="off" aria-label="Time remaining for this move">
+      <span class="timer-icon">⏱️</span>
+      <span id="timer-label">Time left</span>
+      <span id="timer-count">10</span>
+      <span class="timer-unit">SEC</span>
+    </div>
+
+    <!-- Game Board -->
+    <section class="game-board" id="game-board"
+             role="group" aria-label="Tic Tac Toe board">
+
+      <button class="cell" data-index="0" type="button"
+              aria-label="Cell 1"></button>
+      <button class="cell" data-index="1" type="button"
+              aria-label="Cell 2"></button>
+      <button class="cell" data-index="2" type="button"
+              aria-label="Cell 3"></button>
+
+      <button class="cell" data-index="3" type="button"
+              aria-label="Cell 4"></button>
+      <button class="cell" data-index="4" type="button"
+              aria-label="Cell 5"></button>
+      <button class="cell" data-index="5" type="button"
+              aria-label="Cell 6"></button>
+
+      <button class="cell" data-index="6" type="button"
+              aria-label="Cell 7"></button>
+      <button class="cell" data-index="7" type="button"
+              aria-label="Cell 8"></button>
+      <button class="cell" data-index="8" type="button"
+              aria-label="Cell 9"></button>
+
+    </section>
+
+    <!-- Result Message -->
+    <div id="result-message" aria-live="polite"></div>
+
+    <!-- Sound Control -->
+    <div class="sound-controls">
+      <button id="sound-btn" type="button" aria-pressed="true">
+        🔊 Sound On
+      </button>
+    </div>
+
+    <!-- Game Controls -->
+    <div class="game-controls">
+      <button id="restart-btn" type="button">
+        🔄 Restart Round
+      </button>
+
+      <button id="reset-btn" type="button">
+        🗑️ Reset Scores
+      </button>
+    </div>
+
+    <footer class="game-footer">
+      <p>Made with 💜 | NEON ARENA</p>
+    </footer>
+
+  </main>
+
+  <!-- Keep the script at the end so HTML elements load first -->
+  <script src="script.js"></script>
+
+</body>
+</html>
